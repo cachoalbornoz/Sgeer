@@ -202,8 +202,6 @@ if (isset($_SESSION['cant_preg']) && $_SESSION['cant_preg'] > 5) {
                         </div>
                     </div>
 
-                    <br>
-
                     <div class="row mt-5 mb-5">
                         <div class="col-xs-12 col-md-12 col-lg-12">
                             <select id="2" name="2" class="form-control">
@@ -221,8 +219,6 @@ if (isset($_SESSION['cant_preg']) && $_SESSION['cant_preg'] > 5) {
                             <label>3) EDAD</label>
                         </div>
                     </div>
-
-                    <br>
 
                     <div class="row mt-5 mb-5">
                         <div class="col-xs-12 col-md-12 col-lg-12">
@@ -308,18 +304,18 @@ if (isset($_SESSION['cant_preg']) && $_SESSION['cant_preg'] > 5) {
                     <?php
                     $seleccion_preguntas = mysqli_query($con, 'select * from preguntas where nro > 5 order by nro asc');
 
-    while ($registro_preguntas = mysqli_fetch_array($seleccion_preguntas)) {
-        $id_pregunta  = $registro_preguntas[0];
-        $nro_pregunta = $registro_preguntas[4];
+                    while ($registro_preguntas = mysqli_fetch_array($seleccion_preguntas)) {
+                        $id_pregunta  = $registro_preguntas[0];
+                        $nro_pregunta = $registro_preguntas[4];
 
-        $seleccion_respuestas = mysqli_query($con, "select * from respuestas where id_pregunta = $id_pregunta order by valor_spss");
-        $tipo_respuesta       = $registro_preguntas[2];
-        $cant_respuestas      = mysqli_num_rows($seleccion_respuestas); ?>
+                        $seleccion_respuestas = mysqli_query($con, "select * from respuestas where id_pregunta = $id_pregunta order by valor_spss");
+                        $tipo_respuesta       = $registro_preguntas[2];
+                        $cant_respuestas      = mysqli_num_rows($seleccion_respuestas); ?>
 
                     <?php $id = $nro_pregunta; ?>
                     <div id="div<?php print $id; ?>" name="div<?php print $id; ?>">
-                        <div class="row mb-3">
-                            <div class="col-xs-12 text-justify" style=" padding-bottom: 20px">
+                        <div class="row">
+                            <div class="col-xs-12">
                                 <label><?php print $nro_pregunta . ') '; ?><?php print $registro_preguntas[3]; ?></label>
                             </div>
                         </div>
@@ -535,7 +531,7 @@ if (isset($_SESSION['cant_preg']) && $_SESSION['cant_preg'] > 5) {
                         <?php
                             break;
                             } ?>
-                        <div class="row mb-3">
+                        <div class="row mt-5 mb-3" style=" padding-bottom: 30px">
                             <div class="col-xs-12">
                                 &nbsp;
                             </div>
