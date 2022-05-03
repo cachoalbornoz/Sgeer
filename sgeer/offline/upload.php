@@ -66,7 +66,7 @@ include('../accesorios/encabezado.php');
                                         // RESPUESTA ABIERTA
                                         mysqli_query($con, "insert into maestro_respuestas_abiertas (id_maestro, id_pregunta, nro_pregunta, respuesta) values ($id_maestro, $id_pregunta, $nro_pregunta, '$respuesta')");
                                     }else{
-                                        if($id_tipo_respuesta == 2 or $id_tipo_respuesta == 3 or $id_tipo_respuesta == 5 or $id_tipo_respuesta == 6 or $id_tipo_respuesta == 7 or $id_tipo_respuesta == 8 or $id_tipo_respuesta == 9 or $id_tipo_respuesta == 11){
+                                        if($id_tipo_respuesta == 2 or $id_tipo_respuesta == 3 or $id_tipo_respuesta == 5 or $id_tipo_respuesta == 6 or $id_tipo_respuesta == 7 or $id_tipo_respuesta == 8 or $id_tipo_respuesta == 9 or $id_tipo_respuesta == 11 or $id_tipo_respuesta == 12){
                                             // RESPUESTA MULTIPLES OPCIONES // MB/B/RB/RM/M/MM/NsNc // EDAD // NIVEL INSTRUCCION OCUPACION // ZONAS // SI/NO/NsNc
                                             mysqli_query($con, "insert into maestro_respuestas_cerradas (id_maestro, id_pregunta, nro_pregunta, id_respuesta) values ($id_maestro, $id_pregunta, $nro_pregunta, $respuesta)");
                                         }else{

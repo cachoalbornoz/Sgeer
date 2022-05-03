@@ -71,7 +71,7 @@
                                     </li> 
                                     <?php if($_SESSION['estado']== 'a'){ ?>
                                     <li role="separator" class="divider"></li>
-                                    <li><a href="#" onclick="limpiar()"><span class="glyphicon glyphicon-trash"></span> Limpiar Encuestas</a></li>   
+                                    <li><a href="#" onclick="limpiar()"><span class="glyphicon glyphicon-trash"></span> Limpiar Encuesta</a></li>   
                                     <li role="separator" class="divider"></li>
                                     <li><a href="../backup/exportar_encuesta.php"><span class="glyphicon glyphicon-level-up"></span> Exportar Encuestas</a></li>
                                     <li role="separator" class="divider"></li>

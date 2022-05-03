@@ -42,7 +42,7 @@ $id_encuesta 	= $_SESSION['id_encuesta'];
         </td>
         <td> 
         <?php
-        if($tipo == 2 or $tipo == 3 or $tipo == 5 or $tipo == 6 or $tipo == 7 or $tipo == 8 or $tipo == 9 or $tipo == 10 or $tipo == 11){ ?>
+        if($tipo == 2 or $tipo == 3 or $tipo == 5 or $tipo == 6 or $tipo == 7 or $tipo == 8 or $tipo == 9 or $tipo == 10 or $tipo == 11 or $tipo == 12){ ?>
             <a href="mostrar_grafico.php?id_pregunta=<?php echo $registro_preguntas_graficas[0] ?>&tipo_grafico=1&tipo_pregunta=<?php echo $registro_preguntas_graficas[2]?>&enunciado=<?php echo $registro_preguntas_graficas[5]?>"><i class="fa fa-pie-chart" aria-hidden="true"></i></a>
         <?php
         }else{
@@ -55,7 +55,7 @@ $id_encuesta 	= $_SESSION['id_encuesta'];
         </td>
         <td>
         <?php
-        if($tipo == 2 or $tipo == 3 or $tipo == 5 or $tipo == 6 or $tipo == 7 or $tipo == 8 or $tipo == 9 or $tipo == 10 or $tipo == 11){ ?>
+        if($tipo == 2 or $tipo == 3 or $tipo == 5 or $tipo == 6 or $tipo == 7 or $tipo == 8 or $tipo == 9 or $tipo == 10 or $tipo == 11 or $tipo == 12){ ?>
             <a href="mostrar_grafico.php?id_pregunta=<?php echo $registro_preguntas_graficas[0] ?>&tipo_grafico=2&tipo_pregunta=<?php echo $registro_preguntas_graficas[2]?>&enunciado=<?php echo $registro_preguntas_graficas[5]?>"><span class="glyphicon glyphicon-signal"></span></a>
         <?php
         }

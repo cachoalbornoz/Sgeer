@@ -25,15 +25,7 @@ if($registro_encuestas = mysqli_fetch_array($tabla_encuestas)){
 
 require_once '../accesorios/encabezado.php';
 
-?>
-
-       
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#detalle_grafico").load('detalle_grafico.php');
-    });
-</script>
-    
+?>    
     
 <div class="panel panel-primary">
     <div class="panel-heading">
@@ -51,6 +43,13 @@ require_once '../accesorios/encabezado.php';
 
     </div>
  </div>
+
+        
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#detalle_grafico").load('detalle_grafico.php');
+    });
+</script>
 
 <?php
 

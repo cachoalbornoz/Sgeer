@@ -69,6 +69,11 @@ switch ($tipo){
         $seleccion_tabla = mysqli_query($con, "select * from tabla_sino");
         break;
     }
+    case '12':{
+        // RESPUESTA TIPO OPINION
+        $seleccion_tabla = mysqli_query($con, "select * from tabla_opinion_no_evalua");
+        break;
+    }
 }
 
 $contador=0;		
@@ -228,6 +233,11 @@ require_once ('../accesorios/encabezado.php');
             case '11':{
                 // RESPUESTA TIPO SI/NO/NsNc
                 $seleccion_tabla = mysqli_query($con, "select * from tabla_sino");
+                break;
+            }
+            case '12':{
+                // RESPUESTA TIPO OPINION
+                $seleccion_tabla = mysqli_query($con, "select * from tabla_opinion_no_evalua");
                 break;
             }
         }
