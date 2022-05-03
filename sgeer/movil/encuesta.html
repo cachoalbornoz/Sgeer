@@ -1,0 +1,1686 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SgeerMovil</title>
+    <meta charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="mi_estilo.css" rel="stylesheet" type="text/css"/>
+    <link href="jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="custom-scripting.js" type="text/javascript"></script>
+
+    <!-- ymz Alert -->
+    <link href="ymz_box.css" rel="stylesheet" type="text/css"/>
+    <script src="ymz_box.min.js" type="text/javascript"></script>
+
+    <link href="jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery.mobile-1.4.5.js" type="text/javascript"></script>
+
+    <style>
+        .ui-page { -webkit-backface-visibility: hidden; }
+    </style>
+</head>
+
+<body>
+
+
+
+<form id="encuesta">
+    <div data-role="page" id="pagina0">
+        <div data-role="header" style="overflow: hidden">
+            <h6>&COPY; SGE-V 1.1</h6>
+        </div>
+
+        <div data-role="main">
+            <div class="ui-content">
+                <div data-role="fieldcontain">
+                    <input type="hidden" name="usuario" id="usuario" value="1" />
+                    <input type="hidden" name="id_encuesta" id="id_encuesta" value="1"/>
+                </div>
+
+                <table  style="width: 100%;margin-left: 0px;  padding: 0px; text-align: center; font-size: small">
+                    <thead>
+                    <tr>
+                        <td>EDAD</td>
+                        <td>VARON</td>
+                        <td>MUJER</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>16-19</td>
+                        <td><input type="number" name="tv16" id="tv16" value="0" readonly="readonly" style="text-align: center"/></td>
+                        <td><input type="number" name="tm16" id="tm16" value="0" readonly="readonly" style="text-align: center"/></td>
+                    </tr>
+                    <tr>
+                        <td>20-29</td>
+                        <td><input type="number" name="tv20" id="tv20" value="0" readonly="readonly" style="text-align: center"/></td>
+                        <td><input type="number" name="tm20" id="tm20" value="0" readonly="readonly" style="text-align: center"/></td>
+                    </tr>
+                    <tr>
+                        <td>30-39</td>
+                        <td><input type="number" name="tv30" id="tv30" value="0" readonly="readonly" style="text-align: center"/></td>
+                        <td><input type="number" name="tm30" id="tm30" value="0" readonly="readonly" style="text-align: center"/></td>
+                    </tr>
+                    <tr>
+                        <td>40-49</td>
+                        <td><input type="number" name="tv40" id="tv40" value="0" readonly="readonly" style="text-align: center"/></td>
+                        <td><input type="number" name="tm40" id="tm40" value="0" readonly="readonly" style="text-align: center"/></td>
+                    </tr>
+                    <tr>
+                        <td>50-59</td>
+                        <td><input type="number" name="tv50" id="tv50" value="0" readonly="readonly" style="text-align: center"/></td>
+                        <td><input type="number" name="tm50" id="tm50" value="0" readonly="readonly" style="text-align: center"/></td>
+                    </tr>
+                    <tr>
+                        <td>60 +</td>
+                        <td><input type="number" name="tv60" id="tv60" value="0" readonly="readonly" style="text-align: center"/></td>
+                        <td><input type="number" name="tm60" id="tm60" value="0" readonly="readonly" style="text-align: center"/></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>TOTAL</td>
+                        <td><input type="number" name="totalv" id="totalv" value="0" readonly="readonly" style="text-align: center"/></td>
+                        <td><input type="number" name="totalm" id="totalm" value="0" readonly="readonly" style="text-align: center"/></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" onClick="salida()" data-iconpos="bottom" data-icon="power">Salir</a></li>
+                    <li><a href="#" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                    <li><a href="#pagina1" data-iconpos="bottom" data-icon="arrow-r">Inicia</a></li>
+                    <li><a href="#" onClick="acerca()" data-iconpos="bottom" data-icon="info">Desarrollo</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="pagina1">
+        <div data-role="header" style="overflow: hidden">
+            <h6>&COPY; SGE-V 1.1</h6>
+        </div>
+        <div data-role="main">
+            <div data-role="content" class="ui-content" style="font-size: small;margin:20px; position:relative">
+                <h3 class="ui-bar ui-bar-c">1) ZONA</h3>
+                <select id="1" name="1" data-native-menu="true" data-mini="true" >
+                    <option value="0" disabled="disabled" selected="selected"></option>
+                    <option value="1">UNO</option>
+                    <option value="2">DOS</option>
+                    <option value="3">TRES</option>
+                    <option value="4">CUATRO</option>
+                    <option value="5">CINCO</option>
+                    <option value="6">SEIS</option>
+                    <option value="7">SIETE</option>
+                    <option value="8">OCHO</option>
+                    <option value="9">NUEVE</option>
+                    <option value="10">DIEZ</option>
+                    <option value="11">ONCE</option>
+                    <option value="12">DOCE</option>
+                    <option value="13">TRECE</option>
+                    <option value="14">CATORCE</option>
+                    <option value="15">QUINCE</option>
+                    <option value="16">DIECISEIS</option>
+                    <option value="17">DIECISIETE</option>
+                    <option value="18">DIECIOCHO</option>
+                    <option value="19">DIECINUEVE</option>
+                    <option value="20">VEINTE</option>
+                </select>
+
+                <h3 class="ui-bar ui-bar-b">2) SEXO</h3>
+                <select id="2" name="2" data-native-menu="true" data-mini="true">
+                    <option value="0" disabled="disabled" selected="selected"></option>
+                    <option value="1">VARON</option>
+                    <option value="2">MUJER</option>
+                </select>
+
+                <h3 class="ui-bar ui-bar-b">3) EDAD</h3>
+                <select id="3" name="3" data-native-menu="true" data-mini="true">
+                    <option value="0"></option>
+                    <option value="1">16 - 19</option>
+                    <option value="2">20 - 29</option>
+                    <option value="3">30 - 39</option>
+                    <option value="4">40 - 49</option>
+                    <option value="5">50 - 59</option>
+                    <option value="6">60 - Más</option>
+                </select>
+
+                <h3 class="ui-bar ui-bar-b">4) NIVEL INSTRUCCION </h3>
+                <select id="4" name="4" data-native-menu="true" data-mini="true">
+                    <option value="0" disabled="disabled" selected="selected"></option>
+                    <option value="1">SIN ESCOLARIDAD</option>
+                    <option value="2">PRIMARIO INCOMPLETO</option>
+                    <option value="3">PRIMARIO COMPLETO</option>
+                    <option value="4">SECUNDARIO INCOMPLETO</option>
+                    <option value="5">SECUNDARIO COMPLETO</option>
+                    <option value="6">TERCIARIO/UNIVERSITARIO INC</option>
+                    <option value="7">TERCIARIO/UNIVERSITARIO COMP</option>
+                </select>
+
+                <h3 class="ui-bar ui-bar-b">5) OCUPACION PRINCIPAL </h3>
+                <select id="5" name="5" data-native-menu="true" data-mini="true">
+                    <option value="0" disabled="disabled" selected="selected"></option>
+                    <option value="1">JUBILADO / PENSIONADO</option>
+                    <option value="2">AMA DE CASA</option>
+                    <option value="3">ESTUDIANTE</option>
+                    <option value="4">DESEMPLEADO</option>
+                    <option value="5">CHANGAS/TRABAJO TEMPORAL</option>
+                    <option value="6">TRABAJADOR PUBLICO</option>
+                    <option value="7">TRABAJADOR PRIVADO</option>
+                    <option value="8">CUENTAPROPISTA / AUTONOMO</option>
+                    <option value="9">INACTIVO</option>
+                </select>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" onClick="salida()" data-iconpos="bottom" data-icon="power">Salir</a></li>
+                    <li><a href="#pagina0" data-iconpos="bottom" data-icon="arrow-l">Atras</a></li>
+                    <li><a href="#pagina2" data-iconpos="bottom" data-icon="arrow-r">Siguiente</a></li>
+                    <li><input value="Limpia" type="button" onclick="limpiar();" data-iconpos="top" data-icon="refresh"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="pagina2">
+        <div data-role="header" data-position="fixed" style="overflow: hidden" data-tap-toggle="false">
+            <h6>&COPY; SGE-V 1.1</h6>
+            <div data-role="navbar">
+                <ul>
+
+                    <li><a href="#div14" data-ajax="false" data-iconpos="bottom" data-icon="star">Ir_16</a></li>
+
+                    <li><a href="#div22" data-ajax="false" data-iconpos="bottom" data-icon="star">Ir_24</a></li>
+
+                    <li><a href="#div34" data-ajax="false" data-iconpos="bottom" data-icon="star">Ir_36</a></li>
+
+                    <li><a href="#div44" data-ajax="false" data-iconpos="bottom" data-icon="star">Ir_46</a></li>
+
+                    <li><a href="#div60" data-ajax="false" data-iconpos="bottom" data-icon="star">Ir_Fin</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div data-role="main">
+            <div data-role="content" class="ui-content" style="font-size: small;margin:20px; position:relative">
+
+
+                <h3 class="ui-bar ui-bar-b">6) ¿MIRASTE TV AL MENOS UNA VEZ EN LO QUE VA DEL AñO?</h3>
+
+                <div id="div6">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r61" name="opcion6" value="1" onclick="asignar(6,1)"/>
+                        <label for="r61" style="font-size: small">SI</label>
+                        <input type="radio" id="r62" name="opcion6" value="2" onclick="asignar(6,2)"/>
+                        <label for="r62" style="font-size: small">NO</label>
+                        <input type="radio" id="r63" name="opcion6" value="3" onclick="asignar(6,3)"/>
+                        <label for="r63" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="6" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">7) ¿CON QUE FRECUENCIA MIRAS TV?</h3>
+
+                <div id="div7">
+
+                    <select id="7" name="7" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="4">TODOS LOS DIAS</option>
+                        <option value="5">DE 6 A 3 VECES POR SEMANA</option>
+                        <option value="6">1 O 2 VECES POR SEMANA</option>
+                        <option value="7">SOLO ALGUNAS VECES AL MES</option>
+                        <option value="8">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">8) LOS DIAS QUE MIRAS TV, ¿CUANTAS HORAS MIRAS EN PROMEDIO?</h3>
+
+                <div id="div8">
+
+                    <select id="8" name="8" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="9">MENOS DE 1HR</option>
+                        <option value="10">DE 1HR HASTA 2HRS SIN INCLUIR</option>
+                        <option value="11">DE 2HRS HASTA 3HRS SIN INCLUIR</option>
+                        <option value="12">DE 3HRS HASTA 4HRS SIN INCLUIR</option>
+                        <option value="13">DE 4HRS HASTA 5HRS SIN INCLUIR</option>
+                        <option value="14">DE 5HRS HASTA 6HRS SIN INCLUIR</option>
+                        <option value="15">MAS DE 6HRS</option>
+                        <option value="16">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">9) EN UN DIA PROMEDIO, ¿QUE CANALES Y EN QUE HORARIOS MIRAS TV?</h3>
+
+                <div id="div9">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <select id="c9" name="c9" size="1" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">CANALES</option>
+                                <option value="18">5RTV </option>
+                                <option value="19">CANAL 3</option>
+                                <option value="20">CANAL 4 CABLEHOGAR</option>
+                                <option value="21">CANAL 5</option>
+                                <option value="22">TV REGIONAL (CABLEVISION)</option>
+                                <option value="23">SOMOS ROSARIO (CABLEVISION)</option>
+                                <option value="24">TV PUBLICA</option>
+                                <option value="25">OTROS 1</option>
+                                <option value="26">OTROS 2</option>
+                                <option value="27">NS-NC</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-b">
+                            <select id="f9" name="f9" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">HORARIOS</option>
+                                <option value="29">7 A 9</option>
+                                <option value="30">9 A 13</option>
+                                <option value="31">13 A 17</option>
+                                <option value="32">17 A 20</option>
+                                <option value="33">20 EN ADELANTE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style=" text-align: center">
+                            <a href="#" onclick="vaciar_lista(9)" data-role="none"  data-inline="true"  data-iconpos="bottom" data-icon="delete" >
+                                <h5>LIMPIAR</h5>
+                            </a>
+                        </div>
+                        <div class="ui-block-b" style=" text-align: center">
+                            <a href="#" onclick="agrega_cruzado(9)" data-role="none" data-inline="true" data-iconpos="bottom" data-icon="check" style=" background-color: greenyellow">
+                                <h5>GUARDAR</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui-grid-a">
+                        <input type="hidden" id="9" value="0" class="cruzado">
+                        <h5>Su selección :</h5>
+                        <textarea id="textarea9" name="textarea9">0</textarea>
+                    </div>
+
+                    <!-- RESPUESTAS MULTIPLES CHECK  -->
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">10) OTROS 1 ¿CUAL?</h3>
+
+                <div id="div10">
+                    <input id="10" name="10" type="text" value="-" data-clear-btn="true" />
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">11) OTROS 2 ¿CUAL?</h3>
+
+                <div id="div11">
+                    <input id="11" name="11" type="text" value="-" data-clear-btn="true" />
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">12) ¿TE CONSIDERAS ESPECTADOR REGULAR DE ALGUN PROGRAMA DE TV?</h3>
+
+                <div id="div12">
+                    <input id="12" name="12" type="text" value="-" data-clear-btn="true" />
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">13) ¿MEDIANTE QUE DISPOSITIVOS MIRAS TV? ¿CON QUE FRECUENCIA?</h3>
+
+                <div id="div13">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <select id="c13" name="c13" size="1" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">DISPOSITIVOS</option>
+                                <option value="35">TELEVISOR</option>
+                                <option value="36">PC, NOTEBOOK, NETBOOK CON A INTERNET</option>
+                                <option value="37">CELULAR CON A INTERNET</option>
+                                <option value="38">TABLET CON A INTERNET</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-b">
+                            <select id="f13" name="f13" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">FRECUENCIA</option>
+                                <option value="40">SIEMPRE</option>
+                                <option value="41">FRECUENTEMENTE</option>
+                                <option value="42">EVENTUALMENTE</option>
+                                <option value="43">NUNCA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style=" text-align: center">
+                            <a href="#" onclick="vaciar_lista(13)" data-role="none"  data-inline="true"  data-iconpos="bottom" data-icon="delete" >
+                                <h5>LIMPIAR</h5>
+                            </a>
+                        </div>
+                        <div class="ui-block-b" style=" text-align: center">
+                            <a href="#" onclick="agrega_cruzado(13)" data-role="none" data-inline="true" data-iconpos="bottom" data-icon="check" style=" background-color: greenyellow">
+                                <h5>GUARDAR</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui-grid-a">
+                        <input type="hidden" id="13" value="0" class="cruzado">
+                        <h5>Su selección :</h5>
+                        <textarea id="textarea13" name="textarea13">0</textarea>
+                    </div>
+
+                    <!-- RESPUESTAS MULTIPLES CHECK  -->
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">14) EN EL TELEVISOR, ¿A TRAVES DE QUE SEñALES MIRAS TV?</h3>
+
+                <div id="div14">
+
+                    <select id="14" name="14" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="44">CABLE</option>
+                        <option value="45">AIRE</option>
+                        <option value="46">SATELITAL (DIRECT TV)</option>
+                        <option value="47">TDA (TEL DIG ABIERTA)</option>
+                        <option value="48">TV VIA INTERNET - CHROME CAST - SMART TV</option>
+                        <option value="49">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">15) ¿QUE TIPO DE PROGRAMAS MIRAS?</h3>
+
+                <div id="div15">
+                    <select id="select15" data-native-menu="true" multiple="multiple" onchange="asignar_check(15)" data-mini="true">
+                        <option value="50">DEPORTIVOS</option>
+                        <option value="51">HUMORISTICOS</option>
+                        <option value="52">NOTICIEROS</option>
+                        <option value="53">PELICULAS</option>
+                        <option value="54">SERIES Y-O NOVELAS</option>
+                        <option value="55">CULTURALES</option>
+                        <option value="56">POLITICOS</option>
+                        <option value="57">CHIMENTOS</option>
+                        <option value="58">MUSICALES</option>
+                        <option value="59">REALITY SHOWS</option>
+                        <option value="60">NS-NC</option>
+                    </select>
+                    <input type="hidden" id="15" value="0" class="cruzado">
+                    <!-- FIN MULTIPLES CHECK -->
+
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">16) ¿SOS USUARIO DE NETFLIX?</h3>
+
+                <div id="div16">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r1661" name="opcion16" value="61" onclick="asignar(16,61)"/>
+                        <label for="r1661" style="font-size: small">SI</label>
+                        <input type="radio" id="r1662" name="opcion16" value="62" onclick="asignar(16,62)"/>
+                        <label for="r1662" style="font-size: small">NO</label>
+                        <input type="radio" id="r1663" name="opcion16" value="63" onclick="asignar(16,63)"/>
+                        <label for="r1663" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="16" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">17) ¿QUE CONTENIDOS ELEGIS EN NETFLIX?</h3>
+
+                <div id="div17">
+                    <select id="select17" data-native-menu="true" multiple="multiple" onchange="asignar_check(17)" data-mini="true">
+                        <option value="64">SERIES FICCION</option>
+                        <option value="65">SERIES DOCUMENTALES</option>
+                        <option value="66">PELICULAS</option>
+                        <option value="67">DOCUMENTALES</option>
+                        <option value="68">NS-NC</option>
+                    </select>
+                    <input type="hidden" id="17" value="0" class="cruzado">
+                    <!-- FIN MULTIPLES CHECK -->
+
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">18) ¿CUAL ES EL DISPOSITIVO QUE MAS UTILIZAS PARA VER NETFLIX?</h3>
+
+                <div id="div18">
+
+                    <select id="18" name="18" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="69">TV</option>
+                        <option value="70">PC - NOTEBOOK - NETBOOK</option>
+                        <option value="71">TABLET</option>
+                        <option value="72">CELULAR</option>
+                        <option value="73">OTROS</option>
+                        <option value="74">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">19) POR FUERA DE NETFLIX, ¿MIRAS PELICULAS O SERIES EN INTERNET?</h3>
+
+                <div id="div19">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r1975" name="opcion19" value="75" onclick="asignar(19,75)"/>
+                        <label for="r1975" style="font-size: small">SI</label>
+                        <input type="radio" id="r1976" name="opcion19" value="76" onclick="asignar(19,76)"/>
+                        <label for="r1976" style="font-size: small">NO</label>
+                        <input type="radio" id="r1977" name="opcion19" value="77" onclick="asignar(19,77)"/>
+                        <label for="r1977" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="19" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">20) ¿A TRAVES DE QUE MEDIO?</h3>
+
+                <div id="div20">
+                    <select id="select20" data-native-menu="true" multiple="multiple" onchange="asignar_check(20)" data-mini="true">
+                        <option value="78">YOUTUBE</option>
+                        <option value="79">TORRENT</option>
+                        <option value="80">SITIOS ONLINE - POR EJ MIRADETODO.TV</option>
+                        <option value="81">OTROS</option>
+                        <option value="82">NS-NC</option>
+                    </select>
+                    <input type="hidden" id="20" value="0" class="cruzado">
+                    <!-- FIN MULTIPLES CHECK -->
+
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">21) ¿TENES ACCESO A UNA PC, NOTEBOOK O NETBOOK EN TU CASA?</h3>
+
+                <div id="div21">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r2183" name="opcion21" value="83" onclick="asignar(21,83)"/>
+                        <label for="r2183" style="font-size: small">SI</label>
+                        <input type="radio" id="r2184" name="opcion21" value="84" onclick="asignar(21,84)"/>
+                        <label for="r2184" style="font-size: small">NO</label>
+                        <input type="radio" id="r2185" name="opcion21" value="85" onclick="asignar(21,85)"/>
+                        <label for="r2185" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="21" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">22) ¿CON QUE FRECUENCIA LA UTILIZAS?</h3>
+
+                <div id="div22">
+
+                    <select id="22" name="22" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="86">TODOS LOS DIAS</option>
+                        <option value="87">DE 3 A 6 VECES POR SEMANA</option>
+                        <option value="88">1 O 2 VECES POR SEMANA</option>
+                        <option value="89">SOLO ALGUNAS VECES AL MES</option>
+                        <option value="90">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">23) LOS DIAS QUE TE SENTAS EN LA COMPU, ¿CUANTAS HORAS LA UTILIZAS EN PROMEDIO?</h3>
+
+                <div id="div23">
+
+                    <select id="23" name="23" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="91">MENOS DE 1HR</option>
+                        <option value="92">DE 1HR  HASTA 2HRS SIN INC</option>
+                        <option value="93">DE 2HRS HASTA 3HRS SIN INC</option>
+                        <option value="94">DE 3HRS HASTA 4HRS SIN INC</option>
+                        <option value="95">DE 4HRS HASTA 5HRS SIN INC</option>
+                        <option value="96">DE 5HRS HASTA 6HRS SIN INC</option>
+                        <option value="97">MAS DE 6HRS</option>
+                        <option value="98">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">24) ¿TENES INTERNET EN CASA?</h3>
+
+                <div id="div24">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r2499" name="opcion24" value="99" onclick="asignar(24,99)"/>
+                        <label for="r2499" style="font-size: small">SI</label>
+                        <input type="radio" id="r24100" name="opcion24" value="100" onclick="asignar(24,100)"/>
+                        <label for="r24100" style="font-size: small">NO</label>
+                        <input type="radio" id="r24101" name="opcion24" value="101" onclick="asignar(24,101)"/>
+                        <label for="r24101" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="24" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">25) ¿TENES ACCESO A INTERNET EN EL TRABAJO, LA ESCUELA O LA UNIVERSIDAD?</h3>
+
+                <div id="div25">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r25102" name="opcion25" value="102" onclick="asignar(25,102)"/>
+                        <label for="r25102" style="font-size: small">SI</label>
+                        <input type="radio" id="r25103" name="opcion25" value="103" onclick="asignar(25,103)"/>
+                        <label for="r25103" style="font-size: small">NO</label>
+                        <input type="radio" id="r25104" name="opcion25" value="104" onclick="asignar(25,104)"/>
+                        <label for="r25104" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="25" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">26) ¿TENES CELULAR CON CONEXION A INTERNET?</h3>
+
+                <div id="div26">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r26105" name="opcion26" value="105" onclick="asignar(26,105)"/>
+                        <label for="r26105" style="font-size: small">SI</label>
+                        <input type="radio" id="r26106" name="opcion26" value="106" onclick="asignar(26,106)"/>
+                        <label for="r26106" style="font-size: small">NO</label>
+                        <input type="radio" id="r26107" name="opcion26" value="107" onclick="asignar(26,107)"/>
+                        <label for="r26107" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="26" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">27) ¿QUE TIPO DE SISTEMA OPERATIVO UTILIZA TU CELULAR?</h3>
+
+                <div id="div27">
+
+                    <select id="27" name="27" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="108">ANDROID</option>
+                        <option value="109">IPHONE</option>
+                        <option value="110">WINDOWS</option>
+                        <option value="111">BLACKBERRY</option>
+                        <option value="112">OTROS</option>
+                        <option value="113">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">28) ¿USAS APLICACIONES DE MENSAJERIA EN EL CELULAR?</h3>
+
+                <div id="div28">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r28114" name="opcion28" value="114" onclick="asignar(28,114)"/>
+                        <label for="r28114" style="font-size: small">SI</label>
+                        <input type="radio" id="r28115" name="opcion28" value="115" onclick="asignar(28,115)"/>
+                        <label for="r28115" style="font-size: small">NO</label>
+                        <input type="radio" id="r28116" name="opcion28" value="116" onclick="asignar(28,116)"/>
+                        <label for="r28116" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="28" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">29) ¿CUALES?</h3>
+
+                <div id="div29">
+                    <select id="select29" data-native-menu="true" multiple="multiple" onchange="asignar_check(29)" data-mini="true">
+                        <option value="117">WHATSAPP</option>
+                        <option value="118">LINE</option>
+                        <option value="119">TELEGRAM</option>
+                        <option value="120">VIBER</option>
+                        <option value="121">OTRA</option>
+                        <option value="122">NS-NC</option>
+                    </select>
+                    <input type="hidden" id="29" value="0" class="cruzado">
+                    <!-- FIN MULTIPLES CHECK -->
+
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">30) ¿TENES ACCESO A UNA TABLET EN CASA?</h3>
+
+                <div id="div30">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r30123" name="opcion30" value="123" onclick="asignar(30,123)"/>
+                        <label for="r30123" style="font-size: small">SI</label>
+                        <input type="radio" id="r30124" name="opcion30" value="124" onclick="asignar(30,124)"/>
+                        <label for="r30124" style="font-size: small">NO</label>
+                        <input type="radio" id="r30125" name="opcion30" value="125" onclick="asignar(30,125)"/>
+                        <label for="r30125" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="30" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">31) ¿SOS USUARIO DE ALGUNA RED SOCIAL?</h3>
+
+                <div id="div31">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r31126" name="opcion31" value="126" onclick="asignar(31,126)"/>
+                        <label for="r31126" style="font-size: small">SI</label>
+                        <input type="radio" id="r31127" name="opcion31" value="127" onclick="asignar(31,127)"/>
+                        <label for="r31127" style="font-size: small">NO</label>
+                        <input type="radio" id="r31128" name="opcion31" value="128" onclick="asignar(31,128)"/>
+                        <label for="r31128" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="31" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">32) ¿CUALES?</h3>
+
+                <div id="div32">
+                    <select id="select32" data-native-menu="true" multiple="multiple" onchange="asignar_check(32)" data-mini="true">
+                        <option value="129">FACEBOOK</option>
+                        <option value="130">TWITTER</option>
+                        <option value="131">INSTAGRAM</option>
+                        <option value="132">YOUTUBE</option>
+                        <option value="133">SNAPCHAT</option>
+                        <option value="134">TINDER</option>
+                        <option value="135">OTRA</option>
+                        <option value="136">NS-NC</option>
+                    </select>
+                    <input type="hidden" id="32" value="0" class="cruzado">
+                    <!-- FIN MULTIPLES CHECK -->
+
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">33) ¿QUE REDES SOCIALES UTILIZAS Y CON QUE FRECUENCIA?</h3>
+
+                <div id="div33">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <select id="c33" name="c33" size="1" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">REDES</option>
+                                <option value="138">FACEBOOK</option>
+                                <option value="139">TWITTER</option>
+                                <option value="140">INSTAGRAM</option>
+                                <option value="141">YOUTUBE</option>
+                                <option value="142">TELEGRAM</option>
+                                <option value="143">SNAPCHAT</option>
+                                <option value="144">TINDER</option>
+                                <option value="145">OTRA</option>
+                                <option value="146">NS-NC</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-b">
+                            <select id="f33" name="f33" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">FRECUENCIA</option>
+                                <option value="148">TODOS LOS DIAS TODO EL TIEMPO</option>
+                                <option value="149">TODOS LOS DIAS VARIAS VECES</option>
+                                <option value="150">TODOS LOS DIAS AL MENOS UNA VEZ</option>
+                                <option value="151">ALGUNOS DIAS A LA SEMANA</option>
+                                <option value="152">ALGUNOS DIAS AL MES</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style=" text-align: center">
+                            <a href="#" onclick="vaciar_lista(33)" data-role="none"  data-inline="true"  data-iconpos="bottom" data-icon="delete" >
+                                <h5>LIMPIAR</h5>
+                            </a>
+                        </div>
+                        <div class="ui-block-b" style=" text-align: center">
+                            <a href="#" onclick="agrega_cruzado(33)" data-role="none" data-inline="true" data-iconpos="bottom" data-icon="check" style=" background-color: greenyellow">
+                                <h5>GUARDAR</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui-grid-a">
+                        <input type="hidden" id="33" value="0" class="cruzado">
+                        <h5>Su selección :</h5>
+                        <textarea id="textarea33" name="textarea33">0</textarea>
+                    </div>
+
+                    <!-- RESPUESTAS MULTIPLES CHECK  -->
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">34) ¿DESDE QUE DISPOSITIVO TE CONECTAS A LAS DISTINTAS REDES SOCIALES?</h3>
+
+                <div id="div34">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <select id="c34" name="c34" size="1" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">REDES SOCIALES</option>
+                                <option value="154">FACEBOOK</option>
+                                <option value="155">TWITTER</option>
+                                <option value="156">INSTAGRAM</option>
+                                <option value="157">YOUTUBE</option>
+                                <option value="158">TELEGRAM</option>
+                                <option value="159">SNAPCHAT</option>
+                                <option value="160">TINDER</option>
+                                <option value="161">OTRA</option>
+                                <option value="162">NS-NC</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-b">
+                            <select id="f34" name="f34" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">DISPOSITIVOS</option>
+                                <option value="164">PC, NOTEBOOK, NETBOOK</option>
+                                <option value="165">CELULAR</option>
+                                <option value="166">TABLET</option>
+                                <option value="167">OTROS</option>
+                                <option value="168">TODOS</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style=" text-align: center">
+                            <a href="#" onclick="vaciar_lista(34)" data-role="none"  data-inline="true"  data-iconpos="bottom" data-icon="delete" >
+                                <h5>LIMPIAR</h5>
+                            </a>
+                        </div>
+                        <div class="ui-block-b" style=" text-align: center">
+                            <a href="#" onclick="agrega_cruzado(34)" data-role="none" data-inline="true" data-iconpos="bottom" data-icon="check" style=" background-color: greenyellow">
+                                <h5>GUARDAR</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui-grid-a">
+                        <input type="hidden" id="34" value="0" class="cruzado">
+                        <h5>Su selección :</h5>
+                        <textarea id="textarea34" name="textarea34">0</textarea>
+                    </div>
+
+                    <!-- RESPUESTAS MULTIPLES CHECK  -->
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">35) ¿SOLES LEER Y/O COMPARTIR LOS LINKS A NOTICIAS PERIODISTICAS INFORMATIVAS QUE PUBLICAN TUS AMIGOS EN SUS MUROS?</h3>
+
+                <div id="div35">
+
+                    <select id="35" name="35" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="169">SI, LEO Y COMPARTO</option>
+                        <option value="170">SI, SOLO LEO</option>
+                        <option value="171">SI, SOLO COMPARTO</option>
+                        <option value="172">NO</option>
+                        <option value="173">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">36) YA SEA CON COMPU, CELULAR U OTRO DISPOSITIVO, ¿CON QUE FRECUENCIA TE CONECTAS A INTERNET?</h3>
+
+                <div id="div36">
+
+                    <select id="36" name="36" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="174">TODOS LOS DIAS</option>
+                        <option value="175">DE 3 A 6 VECES POR SEMANA</option>
+                        <option value="176">1 O 2 VECES POR SEMANA</option>
+                        <option value="177">ALGUNAS VECES AL MES</option>
+                        <option value="178">NUNCA</option>
+                        <option value="179">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">37) UN DIA PROMEDIO, ¿CUANTAS HORAS ESTAS CONECTADO A INTERNET (SEA DEL DISPOSITIVO QUE SEA)?</h3>
+
+                <div id="div37">
+
+                    <select id="37" name="37" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="180">MENOS DE 1HR</option>
+                        <option value="181">DE 1HR HASTA 2HRS SIN INC</option>
+                        <option value="182">DE 2HRS HASTA 3HRS SIN INC</option>
+                        <option value="183">DE 3HRS HASTA 4HRS SIN INC</option>
+                        <option value="184">DE 4HRS HASTA 5HRS SIN INC</option>
+                        <option value="185">DE 5HRS HASTA 6HRS SIN INC</option>
+                        <option value="186">MAS DE 6HRS</option>
+                        <option value="187">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">38) ¿CUAL ES EL DISPOSITIVO CON EL QUE MAS TE CONECTAS A INTERNET?</h3>
+
+                <div id="div38">
+
+                    <select id="38" name="38" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="188">COMPUTADORA</option>
+                        <option value="189">CELULAR</option>
+                        <option value="190">TABLET</option>
+                        <option value="191">OTROS (TV, IPOD, ETC)</option>
+                        <option value="192">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">39) ¿CUAL ES EL SEGUNDO DISPOSITIVO CON EL QUE MAS TE CONECTAS A INTERNET?</h3>
+
+                <div id="div39">
+
+                    <select id="39" name="39" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="193">COMPUTADORA</option>
+                        <option value="194">CELULAR</option>
+                        <option value="195">TABLET</option>
+                        <option value="196">OTROS (TV, I-POD)</option>
+                        <option value="197">SOLO EL ANTERIOR</option>
+                        <option value="198">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">40) GENERALMENTE, ¿DESDE QUE DISPOSITIVO Y EN QUE LUGARES TE SOLES CONECTAR A INTERNET? GUIADA</h3>
+
+                <div id="div40">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <select id="c40" name="c40" size="1" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">LUGAR</option>
+                                <option value="200">EN CASA</option>
+                                <option value="201">EN LA CALLE</option>
+                                <option value="202">EN EL TRABAJO</option>
+                                <option value="203">EN LA ESCUELA O UNIVERSIDAD</option>
+                                <option value="204">EN BARES</option>
+                                <option value="205">EN CYBERS</option>
+                                <option value="206">NS-NC</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-b">
+                            <select id="f40" name="f40" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">DISPOSITIVOS</option>
+                                <option value="208">PC, NOTEBOOK, NETBOOK</option>
+                                <option value="209">CELULAR</option>
+                                <option value="210">TABLET</option>
+                                <option value="211">OTRO</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style=" text-align: center">
+                            <a href="#" onclick="vaciar_lista(40)" data-role="none"  data-inline="true"  data-iconpos="bottom" data-icon="delete" >
+                                <h5>LIMPIAR</h5>
+                            </a>
+                        </div>
+                        <div class="ui-block-b" style=" text-align: center">
+                            <a href="#" onclick="agrega_cruzado(40)" data-role="none" data-inline="true" data-iconpos="bottom" data-icon="check" style=" background-color: greenyellow">
+                                <h5>GUARDAR</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui-grid-a">
+                        <input type="hidden" id="40" value="0" class="cruzado">
+                        <h5>Su selección :</h5>
+                        <textarea id="textarea40" name="textarea40">0</textarea>
+                    </div>
+
+                    <!-- RESPUESTAS MULTIPLES CHECK  -->
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">41) TE LEO UNA SERIE DE POSIBLES USOS QUE LE PODEMOS DAR A INTERNET Y ME GUSTARIA QUE ME DIGAS CUALES HACES Y MEDIANTE QUE DISPOSITIVO (GUIADA)</h3>
+
+                <div id="div41">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <select id="c41" name="c41" size="1" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">FUNCIONES</option>
+                                <option value="213">REDES SOCIALES</option>
+                                <option value="214">CHEQUEAR MAILS</option>
+                                <option value="215">ESCUCHAR O BAJAR MUSICA</option>
+                                <option value="216">VER O DESCAGAR SERIES O PELIS</option>
+                                <option value="217">ESTUDIAR Y/O TRABAJAR</option>
+                                <option value="218">COMPRAR Y VENDER</option>
+                                <option value="219">LEER O DESCARGAR LIBROS, TEXTOS Y/O REVISTAS</option>
+                                <option value="220">JUGAR</option>
+                                <option value="221">LEER DIARIOS DIGITALES Y/O INFORMARSE</option>
+                                <option value="222">NS-NC</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-b">
+                            <select id="f41" name="f41" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">DISPOSITIVOS</option>
+                                <option value="224">PC, NOTEBOOK, NETBOOK</option>
+                                <option value="225">CELULAR</option>
+                                <option value="226">TABLET</option>
+                                <option value="227">OTRA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style=" text-align: center">
+                            <a href="#" onclick="vaciar_lista(41)" data-role="none"  data-inline="true"  data-iconpos="bottom" data-icon="delete" >
+                                <h5>LIMPIAR</h5>
+                            </a>
+                        </div>
+                        <div class="ui-block-b" style=" text-align: center">
+                            <a href="#" onclick="agrega_cruzado(41)" data-role="none" data-inline="true" data-iconpos="bottom" data-icon="check" style=" background-color: greenyellow">
+                                <h5>GUARDAR</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui-grid-a">
+                        <input type="hidden" id="41" value="0" class="cruzado">
+                        <h5>Su selección :</h5>
+                        <textarea id="textarea41" name="textarea41">0</textarea>
+                    </div>
+
+                    <!-- RESPUESTAS MULTIPLES CHECK  -->
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">42) CUANDO MIRAS TV, ¿UTILIZAS SIMULTANEAMENTE OTRO DISPOSITIVO CONECTADO? POR EJEMPLO CELULAR, COMPU, TABLET, ETC.</h3>
+
+                <div id="div42">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r42228" name="opcion42" value="228" onclick="asignar(42,228)"/>
+                        <label for="r42228" style="font-size: small">SI, FRECUENTEMENTE</label>
+                        <input type="radio" id="r42229" name="opcion42" value="229" onclick="asignar(42,229)"/>
+                        <label for="r42229" style="font-size: small">SI, OCASIONALMENTE</label>
+                        <input type="radio" id="r42230" name="opcion42" value="230" onclick="asignar(42,230)"/>
+                        <label for="r42230" style="font-size: small">NO, NUNCA</label>
+                        <input type="radio" id="r42231" name="opcion42" value="231" onclick="asignar(42,231)"/>
+                        <label for="r42231" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="42" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">43) ¿COMENTAS EN REDES SOCIALES O A TRAVES DE SERVICIOS DE MENSAJERIA LO QUE ESTAS MIRANDO? </h3>
+
+                <div id="div43">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r43232" name="opcion43" value="232" onclick="asignar(43,232)"/>
+                        <label for="r43232" style="font-size: small">SI</label>
+                        <input type="radio" id="r43233" name="opcion43" value="233" onclick="asignar(43,233)"/>
+                        <label for="r43233" style="font-size: small">NO</label>
+                        <input type="radio" id="r43234" name="opcion43" value="234" onclick="asignar(43,234)"/>
+                        <label for="r43234" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="43" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">44) ¿PARTICIPAS DE LAS PROPUESTAS DE PROGRAMAS DE TV EN REDES SOCIALES? (MEDIANTE PUBLICACIONES CON HASHTAGS, ENCUESTAS O SIMILARES)</h3>
+
+                <div id="div44">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r44235" name="opcion44" value="235" onclick="asignar(44,235)"/>
+                        <label for="r44235" style="font-size: small">SI</label>
+                        <input type="radio" id="r44236" name="opcion44" value="236" onclick="asignar(44,236)"/>
+                        <label for="r44236" style="font-size: small">NO</label>
+                        <input type="radio" id="r44237" name="opcion44" value="237" onclick="asignar(44,237)"/>
+                        <label for="r44237" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="44" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">45) ¿BUSCAS INFORMACION ADICIONAL EN OTROS DISPOSITIVOS SOBRE LO QUE ESTAS MIRANDO?</h3>
+
+                <div id="div45">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r45238" name="opcion45" value="238" onclick="asignar(45,238)"/>
+                        <label for="r45238" style="font-size: small">SI</label>
+                        <input type="radio" id="r45239" name="opcion45" value="239" onclick="asignar(45,239)"/>
+                        <label for="r45239" style="font-size: small">NO</label>
+                        <input type="radio" id="r45240" name="opcion45" value="240" onclick="asignar(45,240)"/>
+                        <label for="r45240" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="45" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">46) ¿ESCUCHAS RADIO?</h3>
+
+                <div id="div46">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r46241" name="opcion46" value="241" onclick="asignar(46,241)"/>
+                        <label for="r46241" style="font-size: small">SI</label>
+                        <input type="radio" id="r46242" name="opcion46" value="242" onclick="asignar(46,242)"/>
+                        <label for="r46242" style="font-size: small">NO</label>
+                        <input type="radio" id="r46243" name="opcion46" value="243" onclick="asignar(46,243)"/>
+                        <label for="r46243" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="46" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">47) ¿CON QUE FRECUENCIA ESCUCHAS RADIO?</h3>
+
+                <div id="div47">
+
+                    <select id="47" name="47" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="244">TODOS LOS DIAS</option>
+                        <option value="245">DE 3 A 6 VECES POR SEMANA</option>
+                        <option value="246">1 O 2 VECES POR SEMANA</option>
+                        <option value="247">SOLO ALGUNAS VECES AL MES</option>
+                        <option value="248">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">48) EN UN DIA PROMEDIO, ¿CUANTAS HORAS DE RADIO ESCUCHAS?</h3>
+
+                <div id="div48">
+
+                    <select id="48" name="48" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="249">MENOS DE 1HR</option>
+                        <option value="250">DE 1HR HASTA 2HRS SIN INC</option>
+                        <option value="251">DE 2HRS HASTA 3HRS SIN INC</option>
+                        <option value="252">DE 3HRS HASTA 4HRS SIN INC</option>
+                        <option value="253">DE 4HRS HASTA 5HRS SIN INC</option>
+                        <option value="254">DE 5HRS HASTA 6HRS SIN INC</option>
+                        <option value="255">MAS DE 6HRS</option>
+                        <option value="256">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">49) ¿QUE TIPO DE FRECUENCIAS ESCUCHAS?</h3>
+
+                <div id="div49">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r49257" name="opcion49" value="257" onclick="asignar(49,257)"/>
+                        <label for="r49257" style="font-size: small">SOLO AM</label>
+                        <input type="radio" id="r49258" name="opcion49" value="258" onclick="asignar(49,258)"/>
+                        <label for="r49258" style="font-size: small">SOLO FM</label>
+                        <input type="radio" id="r49259" name="opcion49" value="259" onclick="asignar(49,259)"/>
+                        <label for="r49259" style="font-size: small">AMBAS</label>
+                        <input type="radio" id="r49260" name="opcion49" value="260" onclick="asignar(49,260)"/>
+                        <label for="r49260" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="49" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">50) ¿QUE TIPO DE PROGRAMAS ESCUCHAS?</h3>
+
+                <div id="div50">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r50261" name="opcion50" value="261" onclick="asignar(50,261)"/>
+                        <label for="r50261" style="font-size: small">SOLO MUSICA</label>
+                        <input type="radio" id="r50262" name="opcion50" value="262" onclick="asignar(50,262)"/>
+                        <label for="r50262" style="font-size: small">FORMATO TRADICIONAL</label>
+                        <input type="radio" id="r50263" name="opcion50" value="263" onclick="asignar(50,263)"/>
+                        <label for="r50263" style="font-size: small">INDISTINTAMENTE UNO U OTRO</label>
+                        <input type="radio" id="r50264" name="opcion50" value="264" onclick="asignar(50,264)"/>
+                        <label for="r50264" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="50" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">51) ¿QUE RADIO Y EN QUE HORARIOS ESCUCHAS? PARA AM</h3>
+
+                <div id="div51">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <select id="c51" name="c51" size="1" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">DIAL</option>
+                                <option value="266">LT2</option>
+                                <option value="267">LT3</option>
+                                <option value="268">LT8</option>
+                                <option value="269">NACIONAL ROSARIO</option>
+                                <option value="270">NS-NC</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-b">
+                            <select id="f51" name="f51" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">HORARIOS</option>
+                                <option value="272">7 A 9</option>
+                                <option value="273">9 A 13</option>
+                                <option value="274">13 A 17</option>
+                                <option value="275">17 A 20</option>
+                                <option value="276">20 EN ADELANTE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style=" text-align: center">
+                            <a href="#" onclick="vaciar_lista(51)" data-role="none"  data-inline="true"  data-iconpos="bottom" data-icon="delete" >
+                                <h5>LIMPIAR</h5>
+                            </a>
+                        </div>
+                        <div class="ui-block-b" style=" text-align: center">
+                            <a href="#" onclick="agrega_cruzado(51)" data-role="none" data-inline="true" data-iconpos="bottom" data-icon="check" style=" background-color: greenyellow">
+                                <h5>GUARDAR</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui-grid-a">
+                        <input type="hidden" id="51" value="0" class="cruzado">
+                        <h5>Su selección :</h5>
+                        <textarea id="textarea51" name="textarea51">0</textarea>
+                    </div>
+
+                    <!-- RESPUESTAS MULTIPLES CHECK  -->
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">52) ¿QUE RADIO Y EN QUE HORARIOS ESCUCHAS? PARA FM</h3>
+
+                <div id="div52">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <select id="c52" name="c52" size="1" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">DIAL</option>
+                                <option value="278">88.9 FISHERTON CNN</option>
+                                <option value="279">91.9 ROCK N POP</option>
+                                <option value="280">92.3 RADIO 2</option>
+                                <option value="281">93.1 PLUS</option>
+                                <option value="282">94.5 LATINA</option>
+                                <option value="283">95.1 KISS FM</option>
+                                <option value="284">95.5 FM CORAZON</option>
+                                <option value="285">96.9 LA DEPORTIVA</option>
+                                <option value="286">97.3 BOING</option>
+                                <option value="287">97.9 FM VIDA</option>
+                                <option value="288">98.5 FM TANGO</option>
+                                <option value="289">98.9 RADIO SI</option>
+                                <option value="290">99.5 DEL SIGLO</option>
+                                <option value="291">100.7 RADIOFONICA</option>
+                                <option value="292">101.3 CRISTAL CLASSIC</option>
+                                <option value="293">102.1 VORTERIX</option>
+                                <option value="294">102.5 LA RED</option>
+                                <option value="295">103.3 RADIO UNIVERSIDAD</option>
+                                <option value="296">105.5 TL</option>
+                                <option value="297">NS-NC</option>
+                            </select>
+                        </div>
+                        <div class="ui-block-b">
+                            <select id="f52" name="f52" data-native-menu="true">
+                                <option value="0" disabled="disabled" selected="selected">HORARIOS</option>
+                                <option value="299">7 A 9</option>
+                                <option value="300">9 A 13</option>
+                                <option value="301">13 A 17</option>
+                                <option value="302">17 A 20</option>
+                                <option value="303">20 EN ADELANTE</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style=" text-align: center">
+                            <a href="#" onclick="vaciar_lista(52)" data-role="none"  data-inline="true"  data-iconpos="bottom" data-icon="delete" >
+                                <h5>LIMPIAR</h5>
+                            </a>
+                        </div>
+                        <div class="ui-block-b" style=" text-align: center">
+                            <a href="#" onclick="agrega_cruzado(52)" data-role="none" data-inline="true" data-iconpos="bottom" data-icon="check" style=" background-color: greenyellow">
+                                <h5>GUARDAR</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui-grid-a">
+                        <input type="hidden" id="52" value="0" class="cruzado">
+                        <h5>Su selección :</h5>
+                        <textarea id="textarea52" name="textarea52">0</textarea>
+                    </div>
+
+                    <!-- RESPUESTAS MULTIPLES CHECK  -->
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">53) ¿TE CONSIDERAS OYENTE REGULAR DE ALGUN PROGRAMA DE RADIO?</h3>
+
+                <div id="div53">
+                    <input id="53" name="53" type="text" value="-" data-clear-btn="true" />
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">54) ¿LEES EL DIARIO EN FORMATO PAPEL? INDEPENDIENTEMENTE DE SI LO ADQUIERE O LO LEE EN ALGUN LUGAR COMUN</h3>
+
+                <div id="div54">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r54304" name="opcion54" value="304" onclick="asignar(54,304)"/>
+                        <label for="r54304" style="font-size: small">SI</label>
+                        <input type="radio" id="r54305" name="opcion54" value="305" onclick="asignar(54,305)"/>
+                        <label for="r54305" style="font-size: small">NO</label>
+                        <input type="radio" id="r54306" name="opcion54" value="306" onclick="asignar(54,306)"/>
+                        <label for="r54306" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="54" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">55) ¿QUE DIARIO?</h3>
+
+                <div id="div55">
+                    <select id="select55" data-native-menu="true" multiple="multiple" onchange="asignar_check(55)" data-mini="true">
+                        <option value="307">LA CAPITAL</option>
+                        <option value="308">EL CIUDADANO</option>
+                        <option value="309">CLARIN</option>
+                        <option value="310">LA NACION</option>
+                        <option value="311">PAGINA 12</option>
+                        <option value="312">OTRO</option>
+                        <option value="313">NS-NC</option>
+                    </select>
+                    <input type="hidden" id="55" value="0" class="cruzado">
+                    <!-- FIN MULTIPLES CHECK -->
+
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">56) ¿EN TU CASA SE COMPRA EL DIARIO TRADICIONAL EN PAPEL?</h3>
+
+                <div id="div56">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r56314" name="opcion56" value="314" onclick="asignar(56,314)"/>
+                        <label for="r56314" style="font-size: small">SI</label>
+                        <input type="radio" id="r56315" name="opcion56" value="315" onclick="asignar(56,315)"/>
+                        <label for="r56315" style="font-size: small">NO</label>
+                        <input type="radio" id="r56316" name="opcion56" value="316" onclick="asignar(56,316)"/>
+                        <label for="r56316" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="56" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">57) ¿LEES LOS DIARIOS DIGITALES?</h3>
+
+                <div id="div57">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r57317" name="opcion57" value="317" onclick="asignar(57,317)"/>
+                        <label for="r57317" style="font-size: small">SI</label>
+                        <input type="radio" id="r57318" name="opcion57" value="318" onclick="asignar(57,318)"/>
+                        <label for="r57318" style="font-size: small">NO</label>
+                        <input type="radio" id="r57319" name="opcion57" value="319" onclick="asignar(57,319)"/>
+                        <label for="r57319" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="57" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">58) ¿CUALES?</h3>
+
+                <div id="div58">
+                    <select id="select58" data-native-menu="true" multiple="multiple" onchange="asignar_check(58)" data-mini="true">
+                        <option value="320">CONCLUSION</option>
+                        <option value="321">CRUZ DEL SUR</option>
+                        <option value="322">INFO341</option>
+                        <option value="323">INFOROSARIO</option>
+                        <option value="324">LA CAPITAL</option>
+                        <option value="325">EL CIUDADANO</option>
+                        <option value="326">NOTIEXPRESS</option>
+                        <option value="327">ON24</option>
+                        <option value="328">PUNTO BIZ</option>
+                        <option value="329">REDACCION ROSARIO</option>
+                        <option value="330">ROSARIO 12</option>
+                        <option value="331">ROSARIO PLUES</option>
+                        <option value="332">ROSARIO3</option>
+                        <option value="333">OTRO</option>
+                        <option value="334">NS-NC</option>
+                    </select>
+                    <input type="hidden" id="58" value="0" class="cruzado">
+                    <!-- FIN MULTIPLES CHECK -->
+
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">59) ¿FUISTE AL CINE AL MENOS UNA VEZ EN LO QUE VA DEL AñO?</h3>
+
+                <div id="div59">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r59335" name="opcion59" value="335" onclick="asignar(59,335)"/>
+                        <label for="r59335" style="font-size: small">SI</label>
+                        <input type="radio" id="r59336" name="opcion59" value="336" onclick="asignar(59,336)"/>
+                        <label for="r59336" style="font-size: small">NO</label>
+                        <input type="radio" id="r59337" name="opcion59" value="337" onclick="asignar(59,337)"/>
+                        <label for="r59337" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="59" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">60) ¿CON QUE FRECUENCIA VAS AL CINE?</h3>
+
+                <div id="div60">
+
+                    <select id="60" name="60" data-native-menu="true" data-mini="true">
+                        <option value="0">&nbsp;</option>
+                        <option value="338">VARIAS VECES AL MES</option>
+                        <option value="339">ALGUNA VEZ AL MES</option>
+                        <option value="340">CADA 3 MESES</option>
+                        <option value="341">CADA 6 MESES</option>
+                        <option value="342">ALGUNA VEZ AL AÑO</option>
+                        <option value="343">NS-NC</option>
+                    </select>
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">61) ¿FUISTE AL MENOS UNA VEZ AL CINE EL AñO PASADO?</h3>
+
+                <div id="div61">
+                    <fieldset data-role="controlgroup" data-theme="b" data-type="vertical">
+                        <input type="radio" id="r61344" name="opcion61" value="344" onclick="asignar(61,344)"/>
+                        <label for="r61344" style="font-size: small">SI</label>
+                        <input type="radio" id="r61345" name="opcion61" value="345" onclick="asignar(61,345)"/>
+                        <label for="r61345" style="font-size: small">NO</label>
+                        <input type="radio" id="r61346" name="opcion61" value="346" onclick="asignar(61,346)"/>
+                        <label for="r61346" style="font-size: small">NS-NC</label>
+
+                    </fieldset>
+                    <input type="hidden" id="61" value="0">
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">62) ¿CUANTOS LIBROS LEISTE APROXIMADAMENTE EN EL 2016?</h3>
+
+                <div id="div62">
+                    <input id="62" name="62" type="text" value="-" data-clear-btn="true" />
+                </div>
+
+
+
+                <h3 class="ui-bar ui-bar-b">63) TELEFONO</h3>
+
+                <div id="div63">
+                    <input id="63" name="63" type="text" value="-" data-clear-btn="true" />
+                </div>
+
+
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" style="overflow: hidden" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#" onClick="salida()" data-iconpos="bottom" data-icon="power">Salir</a></li>
+                    <li><a href="#pagina1" data-iconpos="bottom" data-icon="arrow-l">Atrás</a></li>
+                    <li><a href="#" data-iconpos="bottom" data-icon="check" onclick="no_vacio(63)">Guardar</a></li>
+                    <li><input value="Limpia" type="button" onclick="limpiar();" data-iconpos="top" data-icon="refresh"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<script type="text/javascript">
+
+    function limpiar(){
+
+        ymz.jq_confirm({title:"Restablecer", text:"Seguro que limpia ?", no_btn:"No", yes_btn:"Confirma",
+            no_fn:function(){},
+            yes_fn:function(){
+                $(".ui-input-text").val('').filter('.ui-slider-input').slider('refresh');
+                $(".ui-checkbox input[type='checkbox'], .ui-radio input[type='radio']").prop("checked", false).checkboxradio("refresh");
+                $('.ui-select select').val('').selectmenu('refresh');
+                $("input:text").val('-');
+                $('.cruzado').val(0);
+            }
+        });
+    }
+
+    function acerca(){
+
+        var texto = 'cachoalbornoz@gmail.com / 0343 154 586951';
+        ymz.jq_alert({title:"Guillermo Albornoz", text:texto, ok_btn:"Ok", close_fn:null});
+
+    }
+
+
+    function Guardar_Android(texto) {
+
+        var sexo = document.getElementById(2).value ;
+        var edad = document.getElementById(3).value ;
+
+        if(sexo == 1){
+            // VARON
+            if(edad == 1){
+                document.getElementById('tv16').value = parseFloat(document.getElementById('tv16').value) + 1;
+            }else{
+                if(edad == 2){
+                    document.getElementById('tv20').value = parseFloat(document.getElementById('tv20').value) + 1;
+                }else{
+                    if(edad == 3){
+                        document.getElementById('tv30').value = parseFloat(document.getElementById('tv30').value) + 1;
+                    }else{
+                        if(edad == 4){
+                            document.getElementById('tv40').value = parseFloat(document.getElementById('tv40').value) + 1;
+                        }else{
+                            if(edad == 5){
+                                document.getElementById('tv50').value = parseFloat(document.getElementById('tv50').value) + 1;
+                            }else{
+                                document.getElementById('tv60').value = parseFloat(document.getElementById('tv60').value) + 1;
+                            }
+                        }
+                    }
+                }
+            }
+            document.getElementById('totalv').value = parseFloat(document.getElementById('totalv').value) + 1;
+        }else{
+            // MUJER
+            if(edad == 1){
+                document.getElementById('tm16').value = parseFloat(document.getElementById('tm16').value) + 1;
+            }else{
+                if(edad == 2){
+                    document.getElementById('tm20').value = parseFloat(document.getElementById('tm20').value) + 1;
+                }else{
+                    if(edad == 3){
+                        document.getElementById('tm30').value = parseFloat(document.getElementById('tm30').value) + 1;
+                    }else{
+                        if(edad == 4){
+                            document.getElementById('tm40').value = parseFloat(document.getElementById('tm40').value) + 1;
+                        }else{
+                            if(edad == 5){
+                                document.getElementById('tm50').value = parseFloat(document.getElementById('tm50').value) + 1;
+                            }else{
+                                document.getElementById('tm60').value = parseFloat(document.getElementById('tm60').value) + 1;
+                            }
+                        }
+                    }
+                }
+            }
+            document.getElementById('totalm').value = parseFloat(document.getElementById('totalm').value) + 1;
+        }
+
+        // Limpiar valores
+
+        $(".ui-input-text").val('').filter('.ui-slider-input').slider('refresh');
+        $(".ui-checkbox input[type='checkbox'], .ui-radio input[type='radio']").prop("checked", false).checkboxradio("refresh");
+        $('.ui-select select').val('').selectmenu('refresh');
+        $("input:text").val('-');
+        $('.cruzado').val(0);
+
+        $.mobile.changePage($("#pagina0"));
+        Android.guardar(texto);
+
+
+    }
+
+    function agrega_cruzado(i){
+
+        if($("#c"+i).val()> 0 && $("#f"+i).val()> 0){
+
+            var valores = ',' + $("#c"+i).val() + '-' + $("#f"+i).val();
+            var textos  = $("#c"+ i +" option:selected").text()+'-'+$("#f"+ i +" option:selected").text();
+
+            var valor = document.getElementById(i).value;
+            if(valor == 0){
+                document.getElementById(i).value = valores;
+                document.getElementById('textarea'+ i).value = textos + ', ';
+            }else{
+                document.getElementById(i).value = document.getElementById(i).value + valores;
+                document.getElementById('textarea'+ i).value = document.getElementById('textarea'+ i).value + textos + ', ';
+            }
+
+            $("#"+i).refresh;
+        }
+    }
+
+    function vaciar_lista(i){
+        document.getElementById(i).value = 0;
+        document.getElementById('textarea'+ i).value = 0;
+    }
+
+
+    function salida() {
+        Android.salir();
+    }
+
+    function asignar(id,valor){
+        document.getElementById(id).value = valor;
+    }
+    function asignar_check(id){
+        document.getElementById(id).value = $('select[id=select'+id+']').val();
+        str = document.getElementById(id).value;
+
+        if(str.length == 0){ // comprueba si deseleccionó todo
+            document.getElementById(id).value = 0;
+        }
+    }
+    function obtenerDatos(cant_preg) {
+        var cadena = '';
+        var id_encuesta = document.getElementById('id_encuesta').value;
+        var nro_usuario = document.getElementById('usuario').value;
+
+        for (i=1; i <= cant_preg ; i ++){
+            var nro = document.getElementById(i);
+            if(typeof nro !== 'undefined' && nro !== null) {
+
+                var nro = document.getElementById(i).value ;
+
+            }else{
+                var sel_f 	= document.getElementById('F_' + i); // Buscar valores en filas
+                var sel_c 	= document.getElementById('C_' + i); // Buscar valores en columnas
+
+                texto = '';
+
+                for(x=0; x < sel_f.children.length; x++){
+                    var child_f = sel_f.children[x];
+                    var child_c = sel_c.children[x];
+
+                    if(child_f.value > 0){
+                        var texto = texto + child_f.value + '_' + child_c.value + '.' ;
+                    }
+                }
+                var texto = texto.substring(0, texto.length-1);
+                var nro = texto;
+            }
+            cadena = cadena + nro + ';' ;
+        }
+        return id_encuesta + ';' + nro_usuario + ';' + cadena ;
+    }
+
+    function no_vacio(cant_preg){
+
+        var error = 0;
+        for (i=1; i <= cant_preg ; i ++){
+            var respuesta = document.getElementById(i);
+            if(typeof respuesta !== 'undefined' && respuesta !== null) {
+                if(document.getElementById(i).value == 0){
+                    if(i < 5){
+                        $.mobile.changePage($("#pagina1"));
+                    }else{
+                        var texto = "Complete Respuesta " + i;
+                        ymz.jq_alert({title:"Incompleto", text:texto, ok_btn:"Ok", close_fn:null});
+
+                        $.mobile.changePage($("#pagina2"));               }
+
+                        error = 1;
+                        break;
+                }
+            }
+        }
+
+        if(error == 0){
+            var datos = obtenerDatos(cant_preg);
+            Guardar_Android(datos);
+        }
+    }
+
+</script>
+
+
+
+</body>
+</html>
