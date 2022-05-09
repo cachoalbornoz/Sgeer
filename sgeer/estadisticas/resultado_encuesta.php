@@ -50,12 +50,12 @@ require_once('../accesorios/encabezado.php');
             $tabla_preguntas = mysqli_query($con, "select cerr.id_respuesta, resp.enunciado from preguntas preg 
             inner join maestro_respuestas_cerradas cerr on preg.id_pregunta = cerr.id_pregunta 
             inner join respuestas resp on cerr.id_respuesta = resp.id_respuesta and preg.id_pregunta = $id_pregunta and preg.id_tipo_respuesta = 4 order by nro");
-            while($registro_preguntas = mysqli_fetch_array($tabla_preguntas, MYSQLI_BOTH)){ 	
+            while($registro_preguntas = mysqli_fetch_array($tabla_preguntas)){ 	
 
                 $id_respuesta_ant   = $registro_preguntas[0];              
                 $enunciado_ant = $registro_preguntas[1]; 
 
-                $registro_preguntas = mysqli_fetch_array($tabla_preguntas, MYSQLI_BOTH);
+                $registro_preguntas = mysqli_fetch_array($tabla_preguntas);
                 $valores[] = $enunciado_ant .' - '.$registro_preguntas[1];                
             }    
             

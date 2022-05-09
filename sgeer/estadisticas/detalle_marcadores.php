@@ -41,7 +41,7 @@ if(isset($_POST['operacion'])){
     <?php
     $contador = 1;
     $tabla_encuestas = mysqli_query($con, "select * from paginadores order by nro_pregunta");
-    while($registro_encuestas = mysqli_fetch_array($tabla_encuestas, MYSQLI_BOTH)){?>
+    while($registro_encuestas = mysqli_fetch_array($tabla_encuestas)){?>
     <tr>
         <td><?php echo $contador; ?></td>
         <td><?php echo $registro_encuestas[1] ?></td>

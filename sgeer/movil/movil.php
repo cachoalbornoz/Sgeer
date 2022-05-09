@@ -22,7 +22,7 @@ if (isset($_SESSION['cant_preg']) && $_SESSION['cant_preg'] > 5) {
     $paginador         = [];
     $contador          = 1;
     $tabla_paginadores = mysqli_query($con, 'select * from paginadores order by nro_pregunta');
-    while ($registro_paginadores = mysqli_fetch_array($tabla_paginadores, MYSQLI_BOTH)) {
+    while ($registro_paginadores = mysqli_fetch_array($tabla_paginadores)) {
         $paginador[] = ['nombre' => $registro_paginadores[1], 'pagina' => $registro_paginadores[2]];
         $contador++;
     } ?>
