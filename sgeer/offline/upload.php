@@ -46,7 +46,8 @@ include('../accesorios/encabezado.php');
                                 $id_encuesta= $detalle[2];
                                 $id_usuario = $detalle[3];
 
-                                mysqli_query($con, "insert into maestro_posiciones (id_encuesta, id_usuario, latitud, longitud, nro_respuesta) values ($id_encuesta, $id_usuario, '$latitud', '$longitud', $contador)") or die('Revisar insercion de posicion');
+                                $insert = "insert into maestro_posiciones (id_encuesta, id_usuario, latitud, longitud, nro_respuesta) values ($id_encuesta, $id_usuario, '$latitud', '$longitud', $contador)";
+                                mysqli_query($con, $insert) or die('Revisar insercion de posicion' . $insert);
 
                                 mysqli_query($con,"insert into maestro_encuestas (id_usuario, id_encuesta) values ($id_usuario, $id_encuesta)") or die("No pudo registrarse el inicio de la encuesta");
 
